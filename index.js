@@ -79,10 +79,12 @@ function Slider(){
         track.style.transition = 'transform 0.5s ease-in';
     };
 
+
+    // 
+
     slides.forEach(setSlidePosition);
 
     slides.forEach(makeIndicator);
-
 
     rightButton.addEventListener("click",()=>{
         const currentSlide = document.querySelector(".current_slide");
@@ -90,9 +92,7 @@ function Slider(){
         if(nextSlide){  
             moveSlide(currentSlide,nextSlide);
             setIndicator(); 
-        }
-       
-      
+        }    
     })
 
     leftButton.addEventListener("click",()=>{
@@ -103,7 +103,7 @@ function Slider(){
             setIndicator(); 
         };
     })
-    
+
 
     window.addEventListener('resize', resetSlidePosition);
 
