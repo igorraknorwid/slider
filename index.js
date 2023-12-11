@@ -112,3 +112,31 @@ function Slider(){
 
 
 Slider()
+
+
+
+class MySlider{
+    constructor(track_classname,left_arrow,right_arrow,control_section) {  // Constructor
+        this.track = document.querySelector(this.setSelector(track_classname));
+        this.slides = Array.from(this.track.children);
+        this.leftButton = document.querySelector(this.setSelector(left_arrow)); 
+        this.rightButton = document.querySelector(this.setSelector(right_arrow));
+        this.control_section = document.querySelector(this.setSelector(control_section));            
+    }
+
+     setSelector(name){
+        return "."+name
+    }
+
+    getTrack(){
+      console.log(this.leftButton)
+      console.log(this.rightButton)
+      console.log(this.control_section)
+    }
+
+  }
+
+
+  const mySlider = new MySlider("slider_track","arrow-left__bt","arrow-right__btn", "slider_control");
+
+  mySlider.getTrack();
